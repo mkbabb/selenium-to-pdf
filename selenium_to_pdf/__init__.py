@@ -1,1 +1,1 @@
-from selenium_to_pdf import *
+from .selenium_to_pdf import *
