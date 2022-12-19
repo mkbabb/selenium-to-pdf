@@ -20,7 +20,7 @@ def send_devtools(driver: webdriver.Chrome, cmd: str, params: dict) -> dict:
 
 
 def html_to_pdf(
-    url: str, print_options: dict | None = None, executeable_path: str = "chromedriver"
+    url: str, print_options: dict | None = None, executable_path: str = "chromedriver"
 ) -> bytes:
     if print_options is None:
         print_options = {}
@@ -35,7 +35,7 @@ def html_to_pdf(
     webdriver_options.add_argument("--disable-gpu")
 
     driver = webdriver.Chrome(
-        executable_path=executeable_path, options=webdriver_options
+        executable_path=executable_path, options=webdriver_options
     )
     driver.get(url)
 
