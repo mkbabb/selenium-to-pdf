@@ -20,8 +20,10 @@ def send_devtools(driver: webdriver.Chrome, cmd: str, params: dict) -> dict:
 
 
 def html_to_pdf(
-    url: str, print_options: dict = {}, executeable_path: str = "chromedriver"
+    url: str, print_options: dict | None, executeable_path: str = "chromedriver"
 ) -> bytes:
+    if print_options is None:
+        print_options = {}
     """Calls Selenium's DevTools API to print a page.
 
     Detailed print options can be found here: https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagepdfoptions
@@ -49,4 +51,3 @@ def html_to_pdf(
     driver.quit()
 
     return base64.b64decode(result["data"])
-
