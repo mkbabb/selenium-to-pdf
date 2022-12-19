@@ -20,7 +20,7 @@ def send_devtools(driver: webdriver.Chrome, cmd: str, params: dict) -> dict:
 
 
 def html_to_pdf(
-    url: str, print_options: dict | None, executeable_path: str = "chromedriver"
+    url: str, print_options: dict | None = None, executeable_path: str = "chromedriver"
 ) -> bytes:
     if print_options is None:
         print_options = {}
