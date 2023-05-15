@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "selenium-to-pdf"
-version = "0.2"
-description = "A simple utility to convert a web page to PDF using Selenium and Chrome."
+version = "0.3.0"
+description = "Given an HTML document, converts thereupon to a PDF using Selenium's DevTools."
 authors = ["Mike Babb <mike7400@gmail.com>"]
 readme = "README.md"
 keywords = ["selenium-to-pdf", "html", "pdf"]
