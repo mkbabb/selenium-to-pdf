@@ -22,14 +22,14 @@ def send_devtools(driver: webdriver.Chrome, cmd: str, params: dict) -> dict:
 def html_to_pdf(
     url: str, print_options: dict | None = None, executable_path: str = "chromedriver"
 ) -> bytes:
-    if print_options is None:
-        print_options = {}
     """Calls Selenium's DevTools API to print a page.
 
     Detailed print options can be found here: https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagepdfoptions
 
     Modified from: https://stackoverflow.com/questions/47023842/selenium-chromedriver-printtopdf
     """
+    if print_options is None:
+        print_options = {}
     webdriver_options = Options()
     webdriver_options.add_argument("--headless")
     webdriver_options.add_argument("--disable-gpu")

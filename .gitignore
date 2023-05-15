@@ -1,16 +1,10 @@
 .DS_Store
-config.php
-phinx.yml
 .vscode/
-vendor/
 .mypy_cache/
 .env
-bootstrap/
-storage/
-auth/
-my_venv/
 data/
+dist/
 __pycache__/
-log/
 
 *.pdf
+
